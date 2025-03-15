@@ -17,15 +17,15 @@ form {
   background-color: #fcfcfc;
 }
 main {
-  height: 80vh;
+  min-height: 80vh;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
 }
-body {
+/* body {
   margin: 0 40px;
-}
+} */
 input {
     padding: 0 5px;
   height: 1.5rem;
@@ -81,11 +81,17 @@ a {
 }
 nav {
   display: flex;
-  width: 100%;
+  width: 100vw;
   justify-content: center;
   height: 3rem;
   align-items: center;
   gap: 3rem;
+  position: sticky;
+  top: 1px;
+  background-color: white;
+  z-index: 1000;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  border-radius: 0 0 10px 1px;
 }
 a:hover {
   transform: scale(1.3);
