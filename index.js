@@ -15,7 +15,7 @@ app.use(middle);
 app.use(express.static("public"));
 function middle(req, res, next) {
   year = d.getFullYear();
-
+  console.log(`request: ${req.ip}`)
   next();
 }
 
@@ -37,16 +37,23 @@ app.get("/create", (req, res) => {
     title:"<h3>Write a blog for page</h3>",
     year: year,
     act:"submit",
-    key:"required"
+    key:"required",
+    kasle:"",
+    kasko:""
   });
 });
 app.post("/edit", (req, res) => {
       ok=req.body.postId;
+      let index = postArray.findIndex((post) => {
+        return ok == post.id;});
+        console.log(`edit ko ${postArray[index].blog}`);
   res.render(_dirname + "/views/create.ejs", {
     title:"<h3>Edit blog(empty box for nochange)</h3>",
     year: year,
     act:"update",
-    key:" "
+    key:" ",
+    kasle:postArray[index].author,
+    kasko:postArray[index].blog
   });
 });
 app.post("/update",(req,res)=>{
@@ -59,6 +66,8 @@ app.post("/update",(req,res)=>{
     postArray[index].id=index;
     postArray[index].blog=req.body.blog.trim()==""?postArray[index].blog:req.body.blog;
     postArray[index].author=req.body.author.trim()==""?postArray[index].author:req.body.author;
+
+
   }
   res.redirect("/");
 })
