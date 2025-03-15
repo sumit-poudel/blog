@@ -1,0 +1,19 @@
+<%- include("partials/header.ejs")  %>
+<main>
+    <% if(locals.postArray.length>0) {%>
+        <h1>POSTS:</h1>
+        <div class="container">
+        <% for(let i=0;i<postArray.length;i++) {%>
+            <div class="post">
+                <div class="posto">
+                    <p ><%= postArray[i].blog %></p><hr>
+                    <em ><%= postArray[i].author%></em>
+                </div>
+            </div>
+        <% }}else{ %>
+            <h1>nothing to show here</h1>
+            <% } %>
+        </div>
+
+</main>
+<%- include("partials/footer.ejs")  %>

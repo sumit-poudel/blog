@@ -1,0 +1,127 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "JetBrains Mono", monospace;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: regular;
+}
+form {
+  display: flex;
+  flex-direction: column;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  border-radius: 5px;
+  height: 15rem;
+  width: 20rem;
+  padding: 2rem;
+  background-color: #fcfcfc;
+}
+main {
+  height: 80vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+body {
+  margin: 0 40px;
+}
+input {
+    padding: 0 5px;
+  height: 1.5rem;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  border-color: #9c9c9c;
+  border-radius: 5px; 
+}
+.post {
+  margin: 1rem 1rem;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  border-radius: 5px;
+  width: 15rem;
+  padding: 1rem;
+  overflow: hidden;
+  text-wrap: pretty;
+  flex-grow: 1;
+  transition: all ease 0.3s;
+  position: relative;
+}
+.post:hover{
+    transform: scale(1.1,1.2);
+}
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+}
+#blog {
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  border-color: #9c9c9c;
+  padding: 0 5px;
+  width: 100%;
+  height: 5rem;
+  margin-bottom: 1rem;
+  line-height: normal;
+  vertical-align: top;
+  box-sizing: border-box;
+}
+p {
+  margin: 1rem 0;
+}
+h3 {
+  margin-bottom: 5px;
+  border-bottom: 1px solid black;
+  text-align: center;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+  transition: all ease-in-out 0.3s;
+}
+nav {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  height: 3rem;
+  align-items: center;
+  gap: 3rem;
+}
+a:hover {
+  transform: scale(1.3);
+}
+.X{
+  border-radius: 50%;
+  height: 20px;
+  width: 20px;
+  box-shadow: none;
+  visibility: visible;
+}
+.Xform{ 
+  box-shadow: none;
+  width: 90%;
+  height: 30px;
+  border-radius: 50%;
+  visibility: hidden;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  z-index: 2;
+  display: flex;
+  align-items: end;
+}
+.posto{
+  z-index: 1;
+  inset: 0;
+  position: relative;
+}
+#edit{
+  width: 80%;
+}
+
+
+@media only screen and (max-width: 400px) {
+  form{
+    width: 17rem;
+  }
+}

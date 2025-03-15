@@ -1,0 +1,16 @@
+<%- include("partials/header.ejs") %>
+<main>
+  <form action="/<%=act  %>" method="post">
+    <%- title %>
+    <label for="author">
+      author: <br>
+      <input type="text" name="author" id="author" <%= key %>/>
+     </label>
+    <label for="blog" style="margin-top: 1rem;">
+        write your blog here: <br>
+      <textarea name="blog" id="blog"></textarea>
+    </label>
+    <input type="submit" value="<%= act %>" />
+  </form>
+</main>
+<%- include("partials/footer.ejs") %>
